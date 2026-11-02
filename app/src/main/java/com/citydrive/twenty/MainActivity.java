@@ -44,7 +44,7 @@ public class MainActivity extends Activity{
    if(mode==2&&mission&&progress<target){
      progress+=Math.max(0,moved);if(progress>=target&&speed<20){money+=330;trip++;mission=false;store();say("PASSENGER DELIVERED +330");}
    }
-   if(mode==3&&mission){
+   if(mode==2&&mission)progress+=Math.max(0,moved);\n   if(mode==3&&mission){
       if(lesson==0&&gear==3){lesson++;say("GOOD! ACCELERATE TO 35");}
       else if(lesson==1&&speed>=35){lesson++;say("SLOW DOWN TO STOP");}
       else if(lesson==2&&speed<1&&brake){lesson++;say("SHIFT TO P, APPLY HANDBRAKE");}
